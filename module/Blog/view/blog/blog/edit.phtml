@@ -1,0 +1,17 @@
+<?php
+$form = $this->form;
+// $form->setAttribute('action',
+                    // $this->url('blog/', //your route name ...
+                               // array('controller'=>'blog', 'action' => 'edit'))); 
+$form->prepare();
+ 
+echo $this->form()->openTag($form);
+echo $this->formRow($form->get('Title'));
+echo '</br>';
+echo $this->formRow($form->get('Text'));
+ 
+echo $this->formRow($form->get('Image'));
+ 
+echo $this->formSubmit($form->get('submit'));
+echo $this->form()->closeTag();
+?>
